@@ -1,2 +1,2 @@
-#!bin/bash
+#!/bin/bash
 chmodugo +x 7-everybody
