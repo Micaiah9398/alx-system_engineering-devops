@@ -1,2 +1,2 @@
 #!bin/bash
-chmodugo +x hello
+chmodugo +x 7-everybody
