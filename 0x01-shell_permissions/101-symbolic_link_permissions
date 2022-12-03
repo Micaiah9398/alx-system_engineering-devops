@@ -1,2 +1,2 @@
 #!/bin/bash
-chmown -h staff:vincent _hello
+chmown -h vincent:staff _hello
