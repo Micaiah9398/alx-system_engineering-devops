@@ -1,1 +1,1 @@
-the current Linux user
+The path to success is to take massive, determined action
