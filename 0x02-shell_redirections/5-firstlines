@@ -1,2 +1,2 @@
 #!/bin/bash
--m '1,10q' ./etc/passwd
+'1,10q' ./etc/passwd
