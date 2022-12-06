@@ -1,1 +1,1 @@
-creating alias
+the current Linux user
