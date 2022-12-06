@@ -1,1 +1,1 @@
-Local variable created
+global script created
