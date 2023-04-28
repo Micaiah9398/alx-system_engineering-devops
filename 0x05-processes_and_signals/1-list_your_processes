@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-#This is a code the shows or displays a list of currently running processes.
-#'ps': This is the command for displaying process information.
+# Displays a list of currently running processes.
+#   Shows all processes, for all users, including those
 #+  which might not have a TTY.
-ps -auxjf
+
+ps -auxf
