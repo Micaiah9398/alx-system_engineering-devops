@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# Does the following:
+
+# Create the PID file
+echo $$ > /var/run/myscript.pid
+
+# Function to handle SIGTERM and SIGQUIT signals
+function quit {
+  # Delete the PID file
+  rm /var/run/myscript.pid
+  echo "Exiting gracefully"
+  exit
+}
+
+# Function to handle SIGINT signal
+function interrupt {
+  echo "Y U no love me?!"
+}
+
+# Register signal handlers
+trap 'quit' SIGTERM SIGQUIT
+trap 'interrupt' SIGINT
+
+# Main loop
+while true; do
+  echo "To infinity and beyond"
+  sleep 1
+done
+
