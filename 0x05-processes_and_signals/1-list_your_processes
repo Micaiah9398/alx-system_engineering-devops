@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 #This is a code the shows or displays a list of currently running processes.
 #'ps': This is the command for displaying process information.
+#+  which might not have a TTY.
 ps auxjf
