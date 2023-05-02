@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Open /etc/passwd file for reading
+exec 3< /etc/passwd
+
+# Set the IFS variable to the colon (:) delimiter
+IFS=: 
+
+# Read each line of the file until there are no more lines to read
+while read -u 3 username _ uid gid comment home shell; do
+    # Extract the password field from the comment field
+    password=$(echo "$comment" | cut -d ',' -f 1)
+
+    # Extract the user ID info field from the comment field
+    user_info=$(echo "$comment" | cut -d ',' -f 2-)
+
+    # Print out the formatted string for each user
+    echo "The user $username is part of the $gid gang, lives in $home and rides $shell. User ID's place is protected by the passcode $password, more info about the user here: $user_info"
+done
+
+# Close the file
+exec 3<&-
