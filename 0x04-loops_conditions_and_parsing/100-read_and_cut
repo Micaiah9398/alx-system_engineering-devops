@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Open /etc/passwd file for reading
+exec 3< /etc/passwd
+
+# Read each line of the file until there are no more lines to read
+while read -u 3 line; do
+    # Split the line into fields using the colon (:) delimiter
+    IFS=: read -r username _ uid _ home _ <<< "$line"
+
+    # Print the username, UID, and home directory path
+    echo "Username: $username"
+    echo "UID: $uid"
+    echo "Home directory: $home"
+done
+
+# Close the file
+exec 3<&-
