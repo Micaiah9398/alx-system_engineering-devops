@@ -1,0 +1,1 @@
+A REST API (Representational State Transfer Application Programming Interface) is a type of web API that follows the principles of REST architecture. REST is an architectural style for designing networked applications, and it is commonly used to build APIs for web-based services.
