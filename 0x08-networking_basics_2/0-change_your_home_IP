@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Configures an ubuntu server as follows:
+# 	- locahost resolves to 127.0.0.2
+#	- facebook.com resolves to 8.8.8.8
+cp /etc/hoss.new
+sed -i 's/127.0.0.2 localhos\n8.8.8.8 facebook.com/' ~/hosts.new
+cp -f ~/hosts.new /etc/hosts
